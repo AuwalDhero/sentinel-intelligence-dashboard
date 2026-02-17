@@ -1,0 +1,5 @@
+{
+  "name": "Sentinel Intelligence Dashboard",
+  "description": "Autonomous social media monitoring and national security intelligence platform for NPF-NCCC. Generates structured TEAM 'B' intelligence reports based on real-time social media analysis.",
+  "requestFramePermissions": []
+}
