@@ -1,11 +1,12 @@
-import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, '.', '');
+  const env = loadEnv(mode, process.cwd(), ''); // or loadEnv(mode, '.', '')
+
   return {
-    base: './',  // ← Add this line! (or '/' if you prefer absolute paths)
+    base: '/', // or './' — test both if needed for Vercel
     server: {
       port: 3000,
       host: '0.0.0.0',
@@ -17,7 +18,7 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
-      }
-    }
+      },
+    },
   };
 });
